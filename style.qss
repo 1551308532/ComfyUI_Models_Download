@@ -1,0 +1,160 @@
+/* A modern, clean dark theme for the HuggingFace Download Manager */
+
+QWidget {
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+    font-family: "Segoe UI", "Cantarell", "Verdana", "Arial", sans-serif;
+    font-size: 10pt;
+}
+
+QMainWindow {
+    background-color: #2b2b2b;
+}
+
+/* Toolbar and Menubar */
+QToolBar, QMenuBar {
+    background-color: #3c3c3c;
+    border: none;
+    padding: 2px;
+}
+
+QMenu {
+    background-color: #3c3c3c;
+    border: 1px solid #555;
+}
+
+QMenu::item:selected {
+    background-color: #55aaff;
+    color: #ffffff;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #55aaff;
+    color: #ffffff;
+    border: 1px solid #55aaff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    min-width: 60px;
+}
+
+QPushButton:hover {
+    background-color: #77bbff;
+}
+
+QPushButton:pressed {
+    background-color: #4488cc;
+}
+
+/* List and Tree Views */
+QListWidget, QTreeView {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+QListWidget::item:selected, QTreeView::item:selected {
+    background-color: #55aaff;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #3c3c3c;
+    color: #f0f0f0;
+    padding: 4px;
+    border: 1px solid #2b2b2b;
+}
+
+/* Tabs */
+QTabWidget::pane {
+    border: 1px solid #444;
+    border-top: none;
+}
+
+QTabBar::tab {
+    background: #3c3c3c;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 8px 15px;
+}
+
+QTabBar::tab:selected {
+    background: #2b2b2b;
+    border: 1px solid #444;
+    border-bottom: 1px solid #2b2b2b; /* Match pane background */
+}
+
+QTabBar::tab:!selected:hover {
+    background: #4a4a4a;
+}
+
+/* Input Fields */
+QLineEdit, QTextEdit {
+    background-color: #3c3c3c;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 5px;
+    color: #f0f0f0;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    border: none;
+    background: #2b2b2b;
+    width: 12px;
+    margin: 15px 0 15px 0;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background: #555;
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #777;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: #2b2b2b;
+    height: 12px;
+    margin: 0 15px 0 15px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #555;
+    min-width: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #777;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* Dialogs */
+QDialog {
+    background-color: #3c3c3c;
+}
+
+QDialogButtonBox QPushButton {
+    min-width: 80px;
+}
+
+QLabel {
+    color: #f0f0f0;
+}

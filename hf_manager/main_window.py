@@ -344,6 +344,10 @@ class MainWindow(QMainWindow):
 
         toolbar.addSeparator()
 
+        add_link_action = QAction("Add Link", self)
+        add_link_action.triggered.connect(self.add_link_to_selected_tag)
+        toolbar.addAction(add_link_action)
+
         settings_action = QAction("Settings", self)
         settings_action.triggered.connect(self.open_settings)
         toolbar.addAction(settings_action)
@@ -475,6 +479,13 @@ class MainWindow(QMainWindow):
             self.data_model.data["tags"][tag_name] = []
             self.tags_list.addItem(tag_name)
             self.statusBar().showMessage(f"Tag '{tag_name}' added.", 3000)
+
+    def add_link_to_selected_tag(self):
+        current_item = self.tags_list.currentItem()
+        if not current_item:
+            QMessageBox.warning(self, "No Tag Selected", "Please select a tag from the list before adding a link.")
+            return
+        self.add_link_to_tag(current_item)
 
     def rename_tag(self, item):
         old_name = item.text()
