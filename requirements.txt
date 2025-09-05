@@ -1,0 +1,3 @@
+PySide6
+huggingface-hub
+hf-transfer
