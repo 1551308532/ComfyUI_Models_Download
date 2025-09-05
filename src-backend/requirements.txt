@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+huggingface-hub
+hf-transfer
+python-multipart
+pydantic
